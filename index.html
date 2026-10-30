@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="pt">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Passagem — Bolsas de estudo comparticipadas</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;600;800&family=Source+Serif+4:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="top">
+  <a class="brand" href="#">Green Bolsas</a>6
+  <nav id="nav"></nav>
+</header>
+
+<section class="hero">
+  <h1>Estudee fora pagando só uma parte.</h1>
+  <p>Bolsas comparticipadas no Brasil, Estados Unidos, Portugal, Itália e Roménia. Candidata-te grátis; com o plano premium, tens um mentor ao teu lado.</p>
+  <div class="filters">
+    <input id="q" type="search" placeholder="Procurar por curso ou universidade" aria-label="Procurar">
+    <select id="fLevel" aria-label="Nível"><option value="">Todos os níveis</option><option>Licenciatura</option><option>Mestrado</option><option>Doutoramento</option><option>Curso técnico</option></select>
+    <select id="fScope" aria-label="Âmbito"><option value="">Internas e externas</option><option value="interna">Internas</option><option value="externa">Externas</option></select>
+  </div>
+  <div id="countries" class="chips" role="group" aria-label="País"></div>
+</section>
+
+<main>
+  <div id="list" class="list" aria-live="polite"></div>
+  <section id="plans" class="plans"></section>
+  <section id="account" class="account" hidden></section>
+  <section id="admin" class="account" hidden></section>
+</main>
+
+<dialog id="dlg"><form method="dialog" id="dlgForm"></form></dialog>
+<div id="toast" role="status"></div>
+<script src="assets/app.js"></script>
+</body>
+</html>

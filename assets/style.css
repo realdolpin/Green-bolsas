@@ -1,0 +1,54 @@
+:root{--bg:#f4f6f1;--ink:#14231f;--mute:#5b6b65;--line:#d7ddd3;--forest:#0e5a49;--forest-d:#0a4034;--sun:#f0a93a;--card:#fff}
+@media (prefers-color-scheme:dark){:root{--bg:#0e1815;--ink:#eaf1ec;--mute:#9fb0a8;--line:#27382f;--forest:#3fbf9c;--forest-d:#2fa583;--sun:#f0a93a;--card:#15241f}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.55 "Source Serif 4",Georgia,serif}
+h1,h2,h3,.brand,button,.chip,label,select,input,nav a{font-family:"Bricolage Grotesque",system-ui,sans-serif}
+.top{display:flex;justify-content:space-between;align-items:center;padding:14px clamp(16px,5vw,56px);border-bottom:1px solid var(--line)}
+.brand{font-weight:800;font-size:1.3rem;color:var(--forest);text-decoration:none;letter-spacing:-.02em}
+nav{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+nav span{color:var(--mute);font-size:.9rem}
+.hero{padding:clamp(32px,7vw,80px) clamp(16px,5vw,56px) 16px;max-width:1100px}
+.hero h1{font-size:clamp(2.2rem,6.5vw,4.6rem);line-height:1;letter-spacing:-.035em;font-weight:800;margin:0 0 16px;max-width:15ch}
+.hero p{max-width:60ch;color:var(--mute);margin:0 0 24px}
+.filters{display:flex;gap:10px;flex-wrap:wrap}
+input,select,textarea{font:inherit;font-size:.95rem;padding:10px 12px;border:1px solid var(--line);border-radius:8px;background:var(--card);color:var(--ink)}
+.filters input{flex:1 1 260px}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
+.chip{border:1px solid var(--line);background:transparent;color:var(--ink);padding:8px 14px;border-radius:99px;cursor:pointer;font-size:.9rem}
+.chip[aria-pressed=true]{background:var(--forest);border-color:var(--forest);color:#fff}
+main{padding:8px clamp(16px,5vw,56px) 80px;max-width:1160px}
+.list{display:grid;gap:14px;margin-top:20px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:20px;display:grid;grid-template-columns:1fr auto;gap:8px 24px}
+.card h3{margin:0;font-size:1.2rem;letter-spacing:-.01em}
+.meta{color:var(--mute);font-size:.9rem;margin:2px 0 8px}
+.card p{margin:0;max-width:65ch}
+.cov{text-align:right;min-width:110px}
+.cov b{display:block;font:800 2.4rem/1 "Bricolage Grotesque",sans-serif;color:var(--forest)}
+.cov small{color:var(--mute)}
+.bar{height:6px;background:var(--line);border-radius:4px;margin-top:6px;overflow:hidden}.bar i{display:block;height:100%;background:var(--sun)}
+.actions{grid-column:1/-1;display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.tag{font:600 .78rem "Bricolage Grotesque",sans-serif;padding:3px 9px;border-radius:99px;background:var(--line)}
+button.btn,a.btn{font-weight:600;font-size:.92rem;padding:10px 18px;border-radius:8px;border:1px solid var(--forest);background:var(--forest);color:#fff;cursor:pointer;text-decoration:none}
+button.btn:hover{background:var(--forest-d)}
+button.ghost{background:transparent;color:var(--forest)}
+button.sun{background:var(--sun);border-color:var(--sun);color:#1b1305}
+button:disabled{opacity:.55;cursor:default}
+:focus-visible{outline:3px solid var(--sun);outline-offset:2px}
+.plans{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;margin-top:56px}
+.plan{border:1px solid var(--line);border-radius:10px;padding:24px;background:var(--card)}
+.plan.pro{border:2px solid var(--sun)}
+.plan h2{margin:0 0 4px}.plan .price{font:800 2rem "Bricolage Grotesque",sans-serif}
+.plan ul{padding-left:18px;color:var(--mute)}
+.account{margin-top:48px;padding:24px;border:1px solid var(--line);border-radius:10px;background:var(--card)}
+.account h2{margin-top:0}
+.account table{width:100%;border-collapse:collapse;font-size:.92rem}.account td{padding:8px 4px;border-top:1px solid var(--line)}
+dialog{border:1px solid var(--line);border-radius:12px;padding:24px;width:min(460px,92vw);background:var(--card);color:var(--ink)}
+dialog::backdrop{background:rgba(10,20,16,.55)}
+dialog form{display:grid;gap:12px}dialog h2{margin:0}
+label{font-size:.85rem;font-weight:600;display:grid;gap:4px}
+.err{color:#b3261e;font-size:.9rem;min-height:1.2em}
+.row{display:flex;gap:10px;justify-content:flex-end}
+#toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%) translateY(20px);background:var(--ink);color:var(--bg);padding:10px 18px;border-radius:8px;opacity:0;transition:.25s;pointer-events:none;font-family:"Bricolage Grotesque",sans-serif}
+#toast.on{opacity:1;transform:translateX(-50%)}
+@media (max-width:600px){.card{grid-template-columns:1fr}.cov{text-align:left}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
