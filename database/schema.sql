@@ -72,3 +72,5 @@ INSERT INTO scholarships (title,institution,country,scope,level,coverage_percent
 ('Bursa Guvernului Român','Universitatea Politehnică București','Roménia','externa','Licenciatura',60,'2027-07-15','Estudo em inglês com 60% de propinas cobertas e alojamento subsidiado.'),
 ('Medicina em Cluj-Napoca','UMF Iuliu Hațieganu','Roménia','externa','Mestrado',45,'2027-06-01','Comparticipação de 45% para programas de saúde em inglês.');
 -- Para criar um administrador: UPDATE users SET is_admin=1 WHERE email='o.teu@email.com';
+
+-- este é um teste de actualização

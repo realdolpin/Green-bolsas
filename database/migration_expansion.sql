@@ -116,3 +116,4 @@ UPDATE users SET subscription_status = CASE
   ELSE 'expired' END,
   premium_started_at = COALESCE(premium_started_at, CASE WHEN plan='premium' THEN DATE_SUB(premium_until, INTERVAL 30 DAY) END);
 
+-- este é um teste de atualização
