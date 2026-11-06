@@ -12,6 +12,7 @@ ALTER TABLE users
   ADD COLUMN IF NOT EXISTS education VARCHAR(180) NULL,
   ADD COLUMN IF NOT EXISTS academic_level VARCHAR(80) NULL,
   ADD COLUMN IF NOT EXISTS premium_started_at DATE NULL,
+  ADD COLUMN IF NOT EXISTS deleted_at DATETIME NULL,
   ADD COLUMN IF NOT EXISTS subscription_status ENUM('pending','active','expired','cancelled') NOT NULL DEFAULT 'expired';
 
 ALTER TABLE scholarships
@@ -20,7 +21,10 @@ ALTER TABLE scholarships
   ADD COLUMN IF NOT EXISTS status ENUM('draft','published','suspended') NOT NULL DEFAULT 'published';
 
 ALTER TABLE applications
-  MODIFY COLUMN status ENUM('submetida','em_analise','aceite','recusada','retirada') NOT NULL DEFAULT 'submetida';
+  MODIFY COLUMN status ENUM('submetida','em_analise','aceite','recusada','retirada','suspended') NOT NULL DEFAULT 'submetida';
+
+ALTER TABLE users
+  MODIFY COLUMN subscription_status ENUM('pending','active','expired','cancelled','suspended') NOT NULL DEFAULT 'expired';
 
 ALTER TABLE payments
   ADD COLUMN IF NOT EXISTS payment_method ENUM('multicaixa_demo','transfer_demo','reference_demo') NOT NULL DEFAULT 'reference_demo';

@@ -9,7 +9,7 @@ Antes de ir para produção: ligar um gateway de pagamento real (ver comentário
 
 ## Expansão de administração e mentoria
 
-Depois de importar o esquema original, executa uma vez `database/migration_expansion.sql` na base `bolsas` (por exemplo, pelo separador SQL do phpMyAdmin). A migração acrescenta perfis, notificações, favoritos, ligações e mensagens sem apagar as tabelas existentes.
+Depois de importar o esquema original, executa `database/migration_expansion.sql` na base `bolsas` (por exemplo, pelo separador SQL do phpMyAdmin). A migração acrescenta perfis, notificações, favoritos, ligações e mensagens sem apagar as tabelas existentes. Se já tinhas executado uma versão anterior, volta a executar esta versão actualizada para aplicar os novos estados de subscrição/candidatura e o campo de eliminação lógica de contas.
 
 Para notificações de bolsas a 7 e 2 dias do prazo, e avisos de expiração Premium, agenda `api/cron_notifications.php` para correr diariamente no Agendador de Tarefas do Windows, usando `C:\xampp\php\php.exe` como programa e `C:\xampp\htdocs\Green-bolsas\api\cron_notifications.php` como argumento. O script só aceita execução pelo PHP CLI. A página também verifica avisos quando é aberta.
 
