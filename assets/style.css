@@ -42,6 +42,32 @@ button:disabled{opacity:.55;cursor:default}
 .account{margin-top:48px;padding:24px;border:1px solid var(--line);border-radius:10px;background:var(--card)}
 .account h2{margin-top:0}
 .account table{width:100%;border-collapse:collapse;font-size:.92rem}.account td{padding:8px 4px;border-top:1px solid var(--line)}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0 20px}
+.tablewrap{overflow:auto;margin:14px 0}
+table th{text-align:left;padding:9px 8px;border-bottom:2px solid var(--line);font-family:"Bricolage Grotesque",sans-serif;font-size:.85rem}
+.statgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(145px,1fr));gap:12px;margin:16px 0 28px}
+.stat{display:grid;gap:4px;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px}
+.stat b{font:800 1.8rem "Bricolage Grotesque",sans-serif;color:var(--forest)}.stat span{color:var(--mute);font-size:.9rem}
+.rowitem{padding:14px 0;border-top:1px solid var(--line)}.rowitem p{margin:7px 0;color:var(--mute)}
+.formgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:12px;margin:18px 0}
+.formgrid h3,.formgrid button{grid-column:1/-1}
+.mentor-select{width:100%;min-height:44px;background-color:var(--card);font-family:"Bricolage Grotesque",system-ui,sans-serif}
+.choice-group{min-width:0;margin:4px 0;padding:12px;border:1px solid var(--line);border-radius:12px;background:color-mix(in srgb,var(--card) 88%,var(--forest) 12%)}
+.formgrid .choice-group{grid-column:1/-1}
+.choice-group legend{padding:0 7px;font:700 .92rem "Bricolage Grotesque",system-ui,sans-serif;color:var(--ink)}
+.choice-grid{display:flex;flex-wrap:wrap;gap:8px;max-height:145px;overflow:auto;padding:3px}
+.choice-pill{display:inline-flex!important;position:relative;gap:0!important;margin:0;cursor:pointer;font:500 .82rem/1.2 "Bricolage Grotesque",system-ui,sans-serif}
+.choice-pill input{position:absolute;width:1px;height:1px;opacity:0}
+.choice-pill span{display:inline-flex;align-items:center;gap:6px;padding:8px 11px;border:1px solid var(--line);border-radius:999px;background:var(--card);color:var(--ink);transition:background .15s,border-color .15s,color .15s,transform .15s}
+.choice-pill span::before{content:'+';display:grid;place-items:center;width:16px;height:16px;border-radius:50%;background:var(--bg);color:var(--mute);font-size:.85rem;font-weight:700}
+.choice-pill:hover span{border-color:var(--forest);transform:translateY(-1px)}
+.choice-pill input:checked+span{border-color:var(--forest);background:var(--forest);color:#fff;box-shadow:0 2px 7px rgba(14,90,73,.18)}
+.choice-pill input:checked+span::before{content:'✓';background:rgba(255,255,255,.2);color:#fff}
+.choice-pill input:focus-visible+span{outline:3px solid var(--sun);outline-offset:2px}
+.fieldhint{display:block;margin-top:8px;color:var(--mute);font:400 .76rem/1.35 "Bricolage Grotesque",system-ui,sans-serif}
+dialog form{max-height:78vh;overflow:auto}
+.chatlog{max-height:50vh;overflow:auto;border:1px solid var(--line);border-radius:8px;padding:10px}.chatlog p{border-bottom:1px solid var(--line);padding:8px 0}
+.unread{border-left:4px solid var(--sun);padding-left:12px}
 dialog{border:1px solid var(--line);border-radius:12px;padding:24px;width:min(460px,92vw);background:var(--card);color:var(--ink)}
 dialog::backdrop{background:rgba(10,20,16,.55)}
 dialog form{display:grid;gap:12px}dialog h2{margin:0}
