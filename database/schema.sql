@@ -16,9 +16,9 @@ CREATE TABLE scholarships (
   id INT AUTO_INCREMENT PRIMARY KEY,
   title VARCHAR(200) NOT NULL,
   institution VARCHAR(200) NOT NULL,
-  country ENUM('Brasil','Estados Unidos','Portugal','Itália','Roménia') NOT NULL,
+  country VARCHAR(100) NOT NULL,
   scope ENUM('interna','externa') NOT NULL DEFAULT 'externa',
-  level ENUM('Licenciatura','Mestrado','Doutoramento','Curso técnico') NOT NULL,
+  level VARCHAR(60) NOT NULL,
   coverage_percent TINYINT UNSIGNED NOT NULL,        -- comparticipação (0-100)
   deadline DATE NOT NULL,
   description TEXT NOT NULL,

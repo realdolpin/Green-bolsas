@@ -78,3 +78,12 @@ label{font-size:.85rem;font-weight:600;display:grid;gap:4px}
 #toast.on{opacity:1;transform:translateX(-50%)}
 @media (max-width:600px){.card{grid-template-columns:1fr}.cov{text-align:left}}
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
+
+/* v3: feedback, mentoria inline, palavra-passe */
+#toast.ok{background:var(--forest);color:#fff}#toast.err{background:#b3261e;color:#fff}
+input[aria-invalid],select[aria-invalid],textarea[aria-invalid]{border-color:#b3261e;box-shadow:0 0 0 2px rgba(179,38,30,.2)}
+.err:not(:empty){background:rgba(179,38,30,.1);border-left:3px solid #b3261e;padding:8px 10px;border-radius:6px;color:#b3261e}
+.pw{display:flex;gap:6px}.pw input{flex:1}.pw button{border:1px solid var(--line);border-radius:8px;padding:0 12px;background:transparent;color:var(--forest);cursor:pointer}
+dialog a{color:var(--forest);font-weight:600}
+.mentor-request{display:grid;gap:10px;margin-top:12px;padding:14px;border:1px dashed var(--line);border-radius:8px}
+.mentor-request[hidden]{display:none}.mentor-request textarea,.mentor-request select{width:100%}

@@ -14,3 +14,8 @@ Depois de importar o esquema original, executa `database/migration_expansion.sql
 Para notificações de bolsas a 7 e 2 dias do prazo, e avisos de expiração Premium, agenda `api/cron_notifications.php` para correr diariamente no Agendador de Tarefas do Windows, usando `C:\xampp\php\php.exe` como programa e `C:\xampp\htdocs\Green-bolsas\api\cron_notifications.php` como argumento. O script só aceita execução pelo PHP CLI. A página também verifica avisos quando é aberta.
 
 Os pagamentos Premium continuam demonstrativos: nenhuma cobrança ou transferência real é realizada.
+
+
+## Atualização v3
+
+Executa também `database/migration_v3_angola_cursos.sql` no phpMyAdmin (separador SQL). Liberta país/nível/curso e cria as bolsas internas de Angola.
