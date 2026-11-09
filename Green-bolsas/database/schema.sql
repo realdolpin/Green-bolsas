@@ -1,6 +1,6 @@
 -- =====================================================================
 -- Green Bolsas — base de dados COMPLETA (instalação do zero, ficheiro único)
--- Importa este ficheiro no phpMyAdmin (separador Importar) e mais nada.
+-- Importa este file no phpMyAdmin (separador Importar) e mais nada.
 -- =====================================================================
 CREATE DATABASE IF NOT EXISTS bolsas CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 USE bolsas;
